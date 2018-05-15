@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pick_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9M-bd-zV2">
+                                <rect key="frame" x="20" y="27" width="374" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="c6H-Qb-Qed"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ocR-Bd-Hoy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Jqv-AC-LCO"/>
+                                </connections>
+                            </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GWk-Nu-EGn">
+                                <rect key="frame" x="33" y="263" width="361" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="MhG-lm-lcl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdZ-Qo-y6f">
+                                <rect key="frame" x="33" y="439" width="82" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="Bco-f7-38j"/>
+                                </constraints>
+                                <state key="normal" title="Clear Text"/>
+                                <connections>
+                                    <action selector="buttonClearWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="wUN-CO-hy6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU9-65-N2y">
+                                <rect key="frame" x="228" y="428" width="160" height="46"/>
+                                <state key="normal" title="Choose Selections"/>
+                                <connections>
+                                    <action selector="buttonPickWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="LfD-LB-FdI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GWk-Nu-EGn" secondAttribute="trailing" id="1Xm-5h-HPU"/>
+                            <constraint firstItem="a9M-bd-zV2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="6mw-5t-jyx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LU9-65-N2y" secondAttribute="bottom" constant="262" id="9BJ-Nz-ZVP"/>
+                            <constraint firstItem="UdZ-Qo-y6f" firstAttribute="top" secondItem="GWk-Nu-EGn" secondAttribute="bottom" constant="16" id="ByQ-Ee-C4j"/>
+                            <constraint firstItem="GWk-Nu-EGn" firstAttribute="top" secondItem="a9M-bd-zV2" secondAttribute="bottom" constant="20" id="H9t-VL-eg9"/>
+                            <constraint firstItem="LU9-65-N2y" firstAttribute="trailing" secondItem="a9M-bd-zV2" secondAttribute="trailing" constant="-6" id="LOe-x6-MXa"/>
+                            <constraint firstItem="a9M-bd-zV2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Paa-sK-zUR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UdZ-Qo-y6f" secondAttribute="bottom" constant="273" id="Rmi-gc-AYK"/>
+                            <constraint firstItem="UdZ-Qo-y6f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="XSu-S3-UNd"/>
+                            <constraint firstItem="LU9-65-N2y" firstAttribute="baseline" secondItem="UdZ-Qo-y6f" secondAttribute="firstBaseline" id="nBy-Ga-gE2"/>
+                            <constraint firstItem="GWk-Nu-EGn" firstAttribute="leading" secondItem="a9M-bd-zV2" secondAttribute="leading" constant="13" id="xfw-Mr-Srt"/>
+                            <constraint firstItem="a9M-bd-zV2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zLJ-va-vW3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="message" destination="GWk-Nu-EGn" id="kos-SQ-Vff"/>
+                        <outlet property="thePicker" destination="a9M-bd-zV2" id="SQ3-uO-KKk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15" y="23.75"/>
+        </scene>
+    </scenes>
+</document>
